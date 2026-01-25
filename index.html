@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Bodhi Backwater Retreat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Fonts -->
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
@@ -16,149 +19,89 @@
       --bg: #faf8f4;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
     body {
       font-family: 'Inter', sans-serif;
       background: var(--bg);
       color: #333;
-      line-height: 1.6;
+    }
+
+    section {
+      padding: 90px 0;
     }
 
     /* NAVBAR */
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 8%;
+    .navbar {
       background: #fff;
-      box-shadow: 0 4px 12px rgba(0,0,0,.04);
+      box-shadow: 0 4px 12px rgba(0,0,0,.05);
     }
 
-    nav img {
-  height: 64px;          /* desktop */
-  max-height: 72px;
-}
-
-@media (max-width: 768px) {
-  nav img {
-    height: 52px;        /* mobile */
-  }
-}
-
-    nav ul {
-      display: flex;
-      gap: 28px;
-      list-style: none;
-      align-items: center;
+    .navbar-brand img {
+      height: 56px;
     }
 
-    nav a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-    }
-
-    .btn {
+    .btn-gold {
       background: var(--gold);
       color: #fff;
+      border-radius: 25px;
       padding: 10px 22px;
-      border-radius: 24px;
-      text-decoration: none;
-      font-weight: 500;
+      border: none;
+      transition: all .3s ease;
+    }
+
+    .btn-gold:hover {
+      background: #b08e3f;
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(198,162,77,.45);
     }
 
     /* HERO */
-    header {
-      background: linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.25)),
         url("hero.png") center/cover no-repeat;
-      padding: 110px 8%;
       color: #fff;
     }
 
-    header h1 {
+    .hero h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 3.4rem;
-      max-width: 520px;
-      margin-bottom: 15px;
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
     }
 
-    header p {
-      max-width: 520px;
-      font-size: 1.15rem;
-      margin-bottom: 30px;
+    /* FEATURES */
+    .feature-icon {
+      height: 68px;
+      margin-bottom: 18px;
+      opacity: 0.9;
     }
 
-    /* ICON FEATURES */
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 40px;
-      padding: 80px 8%;
-      text-align: center;
-    }
-
-    .feature img {
-      height: 70px;
-      margin-bottom: 15px;
-    }
-
-    .feature h3 {
+    /* EXPERIENCE / GALLERY */
+    .section-title {
       font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      letter-spacing: 0.3px;
       color: var(--green-dark);
-      margin-bottom: 10px;
     }
 
-    /* EXPERIENCE SECTION */
-    .experience {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      padding: 80px 8%;
-      align-items: center;
-    }
-
-    .experience h2 {
-      font-family: 'Playfair Display', serif;
-      color: var(--green-dark);
-      margin-bottom: 15px;
-    }
-
-    .experience img {
+    .image-card img {
       width: 100%;
       border-radius: 22px;
+      box-shadow: 0 18px 40px rgba(0,0,0,.12);
+      transition: transform .4s ease, box-shadow .4s ease;
     }
 
-    /* GALLERY */
-    .gallery {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-      padding: 60px 8%;
-    }
-
-    .gallery img {
-      width: 100%;
-      border-radius: 22px;
+    .image-card img:hover {
+      transform: scale(1.025);
+      box-shadow: 0 25px 60px rgba(0,0,0,.18);
     }
 
     /* FOOTER */
     footer {
-      background: var(--green-dark);
+      background: linear-gradient(135deg, #1f3d2b, #173224);
       color: #fff;
-      text-align: center;
-      padding: 40px 8%;
-    }
-
-    footer p {
-      opacity: 0.85;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 900px) {
-      header h1 { font-size: 2.4rem; }
-      .experience { grid-template-columns: 1fr; }
-      .gallery { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -166,72 +109,122 @@
 <body>
 
 <!-- NAVBAR -->
-<nav>
-  <img src="logo.png" alt="Bodhi Backwater Retreat Logo">
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Huts</a></li>
-    <li><a href="#">Amenities</a></li>
-    <li><a href="#">Gallery</a></li>
-    <li><a href="#" class="btn">Check Availability</a></li>
-  </ul>
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="logo.png" alt="Bodhi Backwater Retreat">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+      <ul class="navbar-nav align-items-lg-center gap-lg-4">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Huts</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Amenities</a></li>
+        <li class="nav-item mt-3 mt-lg-0">
+          <a href="#" class="btn btn-gold">Check Availability</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
 
 <!-- HERO -->
-<header>
-  <h1>Where Calm Takes Root</h1>
-  <p>
-    Nestled in Kerala’s tranquil backwaters, Bodhi Backwater Retreat
-    offers a serene escape to nature, luxury, and timeless tranquility.
-  </p>
-  <a href="#" class="btn">Check Availability</a>
-</header>
+<section class="hero">
+  <div class="container">
+    <div class="col-lg-6">
+      <h1>Where Calm Takes Root</h1>
+      <p class="mt-3 mb-4">
+        Nestled in Kerala’s tranquil backwaters, Bodhi Backwater Retreat
+        offers a serene escape to nature, luxury, and timeless tranquility.
+      </p>
+      <a href="#" class="btn btn-gold">Check Availability</a>
+    </div>
+  </div>
+</section>
 
 <!-- FEATURES -->
-<section class="features">
-  <div class="feature">
-    <img src="icon-hut.png" alt="">
-    <h3>Lakeview Huts</h3>
-    <p>Eco-friendly private huts with stunning water views and sit-outs.</p>
-  </div>
-  <div class="feature">
-    <img src="icon-nature.png" alt="">
-    <h3>Serene Surroundings</h3>
-    <p>Lush greenery, palm-lined waters, and absolute calm.</p>
-  </div>
-  <div class="feature">
-    <img src="icon-wellness.png" alt="">
-    <h3>Wellness & Events</h3>
-    <p>Yoga, meditation, and gatherings in our waterfront hall.</p>
+<section>
+  <div class="container">
+    <div class="row text-center g-4">
+      <div class="col-md-4">
+        <img src="icon-hut.png" class="feature-icon" alt="">
+        <h5 class="section-title">Lakeview Huts</h5>
+        <p>Eco-friendly private huts with stunning water views and sit-outs.</p>
+      </div>
+      <div class="col-md-4">
+        <img src="icon-nature.png" class="feature-icon" alt="">
+        <h5 class="section-title">Serene Surroundings</h5>
+        <p>Lush greenery, palm-lined waters, and absolute calm.</p>
+      </div>
+      <div class="col-md-4">
+        <img src="icon-wellness.png" class="feature-icon" alt="">
+        <h5 class="section-title">Wellness & Events</h5>
+        <p>Yoga, meditation, and gatherings in our waterfront hall.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- EXPERIENCE -->
-<section class="experience">
-  <div>
-    <h2>Experience Tranquility</h2>
-    <p>
-      Welcome to Bodhi Backwater Retreat, where serenity meets comfort.
-      Thoughtfully designed huts, wellness spaces, and nature come together
-      to create a restorative escape.
-    </p>
-    <br>
-    <a href="#" class="btn">Explore the Retreat</a>
-  </div>
-  <img src="experience.png" alt="Bodhi Experience">
-</section>
+<!-- EXPERIENCE / GALLERY -->
+<section>
+  <div class="container">
 
-<!-- GALLERY -->
-<section class="gallery">
-  <img src="gallery1.png" alt="">
-  <img src="gallery2.png" alt="">
+    <div class="row align-items-center g-5 mb-5">
+      <div class="col-lg-6 image-card">
+        <img src="gallery1.png" loading="lazy" alt="">
+      </div>
+      <div class="col-lg-6">
+        <h2 class="section-title mb-3">Backwater Living</h2>
+        <p>
+          Wake up to gentle ripples, birdsong, and golden reflections
+          on Kerala’s pristine backwaters.
+        </p>
+      </div>
+    </div>
+
+    <div class="row align-items-center g-5 mb-5 flex-lg-row-reverse">
+      <div class="col-lg-6 image-card">
+        <img src="gallery2.png" loading="lazy" alt="">
+      </div>
+      <div class="col-lg-6">
+        <h2 class="section-title mb-3">Nature-Inspired Comfort</h2>
+        <p>
+          Designed to blend with nature while offering refined comfort
+          and peaceful solitude.
+        </p>
+      </div>
+    </div>
+
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6 image-card">
+        <img src="gallery3.png" loading="lazy" alt="">
+      </div>
+      <div class="col-lg-6">
+        <h2 class="section-title mb-3">Experience Tranquility</h2>
+        <p>
+          Thoughtfully designed huts, wellness spaces, and nature come together
+          to create a restorative escape by the backwaters.
+        </p>
+      </div>
+    </div>
+
+  </div>
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <p>© 2026 Bodhi Backwater Retreat · Kerala</p>
+<footer class="py-4 text-center">
+  <div class="container">
+    <p class="mb-0">© 2026 Bodhi Backwater Retreat · Kerala</p>
+  </div>
 </footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
