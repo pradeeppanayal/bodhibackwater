@@ -1,0 +1,102 @@
+ :root {
+     --green-dark: #1f3d2b;
+     --green: #3f6f55;
+     --gold: #c6a24d;
+     --bg: #faf8f4;
+ }
+
+ html {
+     scroll-behavior: smooth;
+ }
+
+
+ body {
+     font-family: 'Inter', sans-serif;
+     background: var(--bg);
+     color: #333;
+ }
+
+ section {
+     padding: 90px 0;
+ }
+
+ /* NAVBAR */
+ .navbar {
+     background: #fff;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, .05);
+ }
+
+ .navbar-brand img {
+     height: 56px;
+ }
+
+ .btn-gold {
+     background: var(--gold);
+     color: #fff;
+     border-radius: 25px;
+     padding: 10px 22px;
+     border: none;
+     transition: all .3s ease;
+ }
+
+ .btn-gold:hover {
+     background: #b08e3f;
+     color: #fff;
+     transform: translateY(-2px);
+     box-shadow: 0 10px 25px rgba(198, 162, 77, .45);
+ }
+
+ /* HERO */
+ .hero {
+     min-height: 100vh;
+     display: flex;
+     align-items: center;
+     background:
+         linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .25)),
+         url("hero.png") center/cover no-repeat;
+     color: #fff;
+ }
+
+ .hero h1 {
+     font-family: 'Playfair Display', serif;
+     font-size: clamp(2.2rem, 4vw, 3.4rem);
+ }
+
+ /* FEATURES */
+ .feature-icon {
+     height: 68px;
+     margin-bottom: 18px;
+     opacity: 0.9;
+ }
+
+ /* EXPERIENCE / GALLERY */
+ .section-title {
+     font-family: 'Playfair Display', serif;
+     font-weight: 600;
+     letter-spacing: 0.3px;
+     color: var(--green-dark);
+ }
+
+ .image-card img {
+     width: 100%;
+     border-radius: 22px;
+     box-shadow: 0 18px 40px rgba(0, 0, 0, .12);
+     transition: transform .4s ease, box-shadow .4s ease;
+ }
+
+ .image-card img:hover {
+     transform: scale(1.025);
+     box-shadow: 0 25px 60px rgba(0, 0, 0, .18);
+ }
+
+ /* FOOTER */
+ footer {
+     background: linear-gradient(135deg, #1f3d2b, #173224);
+     color: #fff;
+ }
+ .section-divider {
+  height: 1px;
+  width: 120px;
+  background: rgba(0,0,0,0.08);
+  margin: 60px auto;
+}
