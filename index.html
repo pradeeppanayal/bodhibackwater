@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Bodhi Backwater Retreat</title>
@@ -9,388 +10,336 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
-  <style>
-    :root {
-      --green-dark: #1f3d2b;
-      --green: #3f6f55;
-      --gold: #c6a24d;
-      --bg: #faf8f4;
-    }
-	html {
-  scroll-behavior: smooth;
-}
-
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: #333;
-    }
-
-    section {
-      padding: 90px 0;
-    }
-
-    /* NAVBAR */
-    .navbar {
-      background: #fff;
-      box-shadow: 0 4px 12px rgba(0,0,0,.05);
-    }
-
-    .navbar-brand img {
-      height: 56px;
-    }
-
-    .btn-gold {
-      background: var(--gold);
-      color: #fff;
-      border-radius: 25px;
-      padding: 10px 22px;
-      border: none;
-      transition: all .3s ease;
-    }
-
-    .btn-gold:hover {
-      background: #b08e3f;
-      color: #fff;
-      transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(198,162,77,.45);
-    }
-
-    /* HERO */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      background:
-        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.25)),
-        url("hero.png") center/cover no-repeat;
-      color: #fff;
-    }
-
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.2rem, 4vw, 3.4rem);
-    }
-
-    /* FEATURES */
-    .feature-icon {
-      height: 68px;
-      margin-bottom: 18px;
-      opacity: 0.9;
-    }
-
-    /* EXPERIENCE / GALLERY */
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-weight: 600;
-      letter-spacing: 0.3px;
-      color: var(--green-dark);
-    }
-
-    .image-card img {
-      width: 100%;
-      border-radius: 22px;
-      box-shadow: 0 18px 40px rgba(0,0,0,.12);
-      transition: transform .4s ease, box-shadow .4s ease;
-    }
-
-    .image-card img:hover {
-      transform: scale(1.025);
-      box-shadow: 0 25px 60px rgba(0,0,0,.18);
-    }
-
-    /* FOOTER */
-    footer {
-      background: linear-gradient(135deg, #1f3d2b, #173224);
-      color: #fff;
-    }
-  </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-light sticky-top">
-  <div class="container">
-    <a class="navbar-brand" href="#">
-      <img src="logo.png" alt="Bodhi Backwater Retreat">
-    </a>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="logo.png" alt="Bodhi Backwater Retreat">
+      </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse justify-content-end" id="mainNav">
-      <ul class="navbar-nav align-items-lg-center gap-lg-4">
-        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-		<li class="nav-item">
-		  <a class="nav-link" href="#about">About</a>
-		</li>
-        <li class="nav-item"><a class="nav-link" href="#huts">Huts</a></li>
-        <li class="nav-item"><a class="nav-link" href="#amenities">Amenities</a></li>
-        <li class="nav-item mt-3 mt-lg-0">
-          <!--<a href="#" class="btn btn-gold">Check Availability</a>-->
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="container">
-    <div class="col-lg-6">
-      <h1>Where Calm Takes Root</h1>
-      <p class="mt-3 mb-4">
-        Nestled in Kerala’s tranquil backwaters, Bodhi Backwater Retreat
-        offers a serene escape to nature, luxury, and timeless tranquility.
-      </p>
-      <!--<a href="#" class="btn btn-gold">Check Availability</a>-->
-    </div>
-  </div>
-</section>
-
-<!-- FEATURES -->
-<section>
-  <div class="container">
-    <div class="row text-center g-4">
-      <div class="col-md-4">
-        <img src="icon-hut.png" class="feature-icon" alt="">
-        <h5 class="section-title">Lakeview Huts</h5>
-        <p>Eco-friendly private huts with stunning water views and sit-outs.</p>
-      </div>
-      <div class="col-md-4">
-        <img src="icon-nature.png" class="feature-icon" alt="">
-        <h5 class="section-title">Serene Surroundings</h5>
-        <p>Lush greenery, palm-lined waters, and absolute calm.</p>
-      </div>
-      <div class="col-md-4">
-        <img src="icon-wellness.png" class="feature-icon" alt="">
-        <h5 class="section-title">Wellness & Events</h5>
-        <p>Yoga, meditation, and gatherings in our waterfront hall.</p>
+      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+        <ul class="navbar-nav align-items-lg-center gap-lg-4">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#huts">Huts</a></li>
+          <li class="nav-item"><a class="nav-link" href="#amenities">Amenities</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item mt-3 mt-lg-0">
+            <!--<a href="#" class="btn btn-gold">Check Availability</a>-->
+          </li>
+        </ul>
       </div>
     </div>
-  </div>
-</section>
+  </nav>
 
-<!-- EXPERIENCE / GALLERY -->
-<section>
-  <div class="container">
-
-    <div class="row align-items-center g-5 mb-5">
-      <div class="col-lg-6 image-card">
-        <img src="gallery1.png" loading="lazy" alt="">
-      </div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
       <div class="col-lg-6">
-        <h2 class="section-title mb-3">Backwater Living</h2>
-        <p>
-          Wake up to gentle ripples, birdsong, and golden reflections
-          on Kerala’s pristine backwaters.
+        <h1>Where Calm Takes Root</h1>
+        <p class="mt-3 mb-4">
+          Nestled in Kerala’s tranquil backwaters, Bodhi Backwater Retreat
+          offers a serene escape to nature, luxury, and timeless tranquility.
         </p>
+        <!--<a href="#" class="btn btn-gold">Check Availability</a>-->
       </div>
     </div>
-
-    <div class="row align-items-center g-5 mb-5 flex-lg-row-reverse">
-      <div class="col-lg-6 image-card">
-        <img src="gallery2.png" loading="lazy" alt="">
-      </div>
-      <div class="col-lg-6">
-        <h2 class="section-title mb-3">Nature-Inspired Comfort</h2>
-        <p>
-          Designed to blend with nature while offering refined comfort
-          and peaceful solitude.
-        </p>
-      </div>
-    </div>
-
-    <div class="row align-items-center g-5">
-      <div class="col-lg-6 image-card">
-        <img src="gallery3.png" loading="lazy" alt="">
-      </div>
-      <div class="col-lg-6">
-        <h2 class="section-title mb-3">Experience Tranquility</h2>
-        <p>
-          Thoughtfully designed huts, wellness spaces, and nature come together
-          to create a restorative escape by the backwaters.
-        </p>
+  </section>
+  <!-- FEATURES -->
+  <section id="about" class="bg-white">
+    <div class="container">
+      <div class="row text-center g-4">
+        <div class="col-md-4">
+          <img src="icon-hut.png" class="feature-icon" alt="">
+          <h5 class="section-title">Lakeview Huts</h5>
+          <p>Eco-friendly private huts with stunning water views and sit-outs.</p>
+        </div>
+        <div class="col-md-4">
+          <img src="icon-nature.png" class="feature-icon" alt="">
+          <h5 class="section-title">Serene Surroundings</h5>
+          <p>Lush greenery, palm-lined waters, and absolute calm.</p>
+        </div>
+        <div class="col-md-4">
+          <img src="icon-wellness.png" class="feature-icon" alt="">
+          <h5 class="section-title">Wellness & Events</h5>
+          <p>Yoga, meditation, and gatherings in our waterfront hall.</p>
+        </div>
       </div>
     </div>
+  </section>
+  <!-- ABOUT (ENHANCED & MOVED UP) -->
+  <section>
+    <div class="container">
+      <div class="row align-items-center g-5">
 
-  </div>
-</section>
-<!-- ABOUT -->
-<section id="about" class="py-5 bg-white">
-  <div class="container">
-    <div class="row align-items-center g-5">
-      
-      <div class="col-lg-6">
-        <h2 class="section-title mb-3">About Bodhi Backwater Retreat</h2>
-        <p>
-          Bodhi Backwater Retreat is a thoughtfully curated nature retreat
-          nestled along Kerala’s serene backwaters. Inspired by the Bodhi tree —
-          a symbol of peace, awakening, and balance — the retreat offers guests
-          a space to slow down, reconnect, and breathe.
-        </p>
-        <p>
-          Designed with sustainability at its core, Bodhi blends eco-conscious
-          architecture, private lakeview huts, and a tranquil community hall
-          to create meaningful stays rooted in calm and comfort.
-        </p>
+        <div class="col-lg-6">
+          <span class="text-uppercase small text-muted">Our Philosophy</span>
+          <h2 class="section-title mt-2 mb-4">
+            Rooted in Calm. Designed for Presence.
+          </h2>
+
+          <p>
+            Bodhi Backwater Retreat is not built to impress — it is created
+            to slow life down.
+          </p>
+
+          <p>
+            Inspired by the Bodhi tree, a symbol of awakening and balance,
+            the retreat embraces simplicity, sustainability, and intentional living.
+            Every hut, pathway, and shared space is thoughtfully placed
+            to encourage quiet moments and meaningful connection.
+          </p>
+
+          <p class="mb-0">
+            Here, luxury is unhurried, nature leads the rhythm,
+            and time is allowed to breathe.
+          </p>
+        </div>
+
+        <div class="col-lg-6 image-card">
+          <img src="experience.png" alt="Bodhi Backwater Retreat Experience">
+        </div>
+
       </div>
-
-      <div class="col-lg-6 image-card">
-        <img src="experience.png" alt="About Bodhi Backwater Retreat">
-      </div>
-
     </div>
-  </div>
-</section>
-<!-- HUTS SECTION -->
-<section id="huts" class="py-5 bg-white">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="section-title">Our Huts</h2>
-      <p class="mt-2">
-        Thoughtfully crafted eco-huts that blend comfort, privacy, and nature.
-      </p>
-    </div>
+  </section>
 
-    <div class="row g-4">
-      <!-- Hut Card -->
-      <div class="col-md-6 col-lg-3">
-        <div class="card border-0 shadow-sm h-100">
-          <img src="hut-lake-view.png" class="card-img-top" alt="Lake View Hut">
-          <div class="card-body">
-            <h5 class="card-title section-title">Lake View Hut</h5>
-            <p class="card-text">
-              Private hut with sit-out overlooking serene backwaters.
-            </p>
-          </div>
+  <!-- EXPERIENCE / GALLERY -->
+  <section class="section-muted">
+    <div class="container">
+
+      <div class="row align-items-center g-5 mb-5">
+        <div class="col-lg-6 image-card">
+          <img src="gallery1.png" loading="lazy" alt="">
+        </div>
+        <div class="col-lg-6">
+          <h2 class="section-title mb-3">Backwater Living</h2>
+          <p>
+            Wake up to gentle ripples, birdsong, and golden reflections
+            on Kerala’s pristine backwaters.
+          </p>
         </div>
       </div>
 
-      <!-- Hut Card -->
-      <div class="col-md-6 col-lg-3">
-        <div class="card border-0 shadow-sm h-100">
-          <img src="hut-garden-view.png" class="card-img-top" alt="Garden Hut">
-          <div class="card-body">
-            <h5 class="card-title section-title">Garden Hut</h5>
-            <p class="card-text">
-              Nestled among lush greenery for calm and privacy.
-            </p>
-          </div>
+      <div class="row align-items-center g-5 mb-5 flex-lg-row-reverse">
+        <div class="col-lg-6 image-card">
+          <img src="gallery2.png" loading="lazy" alt="">
+        </div>
+        <div class="col-lg-6">
+          <h2 class="section-title mb-3">Nature-Inspired Comfort</h2>
+          <p>
+            Designed to blend with nature while offering refined comfort
+            and peaceful solitude.
+          </p>
         </div>
       </div>
 
-      <!-- Hut Card -->
-      <div class="col-md-6 col-lg-3">
-        <div class="card border-0 shadow-sm h-100">
-          <img src="hut-premium.png" class="card-img-top" alt="Premium Hut">
-          <div class="card-body">
-            <h5 class="card-title section-title">Premium Hut</h5>
-            <p class="card-text">
-              Spacious interiors with refined natural finishes.
-            </p>
-          </div>
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 image-card">
+          <img src="gallery3.png" loading="lazy" alt="">
         </div>
-      </div>
-
-      <!-- Community Hall -->
-      <div class="col-md-6 col-lg-3">
-        <div class="card border-0 shadow-sm h-100">
-          <img src="CommunityHall.png" class="card-img-top" alt="Community Hall">
-          <div class="card-body">
-            <h5 class="card-title section-title">Community Hall</h5>
-            <p class="card-text">
-              Ideal for yoga, meditation, gatherings, and wellness events.
-            </p>
-          </div>
+        <div class="col-lg-6">
+          <h2 class="section-title mb-3">Experience Tranquility</h2>
+          <p>
+            Thoughtfully designed huts, wellness spaces, and nature come together
+            to create a restorative escape by the backwaters.
+          </p>
         </div>
       </div>
 
     </div>
-  </div>
-</section>
-<!-- AMENITIES SECTION -->
-<section id="amenities" class="py-5">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="section-title">Thoughtfully Curated Amenities</h2>
-      <p class="mt-2">
-        Designed to support stillness, comfort, and meaningful time by the backwaters.
-      </p>
+  </section>
+
+  <!-- HUTS SECTION -->
+  <section id="huts" class="py-5 bg-white">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Our Huts</h2>
+        <p class="mt-2">
+          Thoughtfully crafted eco-huts that blend comfort, privacy, and nature.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Hut Card -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card border-0 shadow-sm h-100">
+            <img src="hut-lake-view.png" class="card-img-top" alt="Lake View Hut">
+            <div class="card-body">
+              <h5 class="card-title section-title">Lake View Hut</h5>
+              <p class="card-text">
+                Private hut with sit-out overlooking serene backwaters.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hut Card -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card border-0 shadow-sm h-100">
+            <img src="hut-garden-view.png" class="card-img-top" alt="Garden Hut">
+            <div class="card-body">
+              <h5 class="card-title section-title">Garden Hut</h5>
+              <p class="card-text">
+                Nestled among lush greenery for calm and privacy.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hut Card -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card border-0 shadow-sm h-100">
+            <img src="hut-premium.png" class="card-img-top" alt="Premium Hut">
+            <div class="card-body">
+              <h5 class="card-title section-title">Premium Hut</h5>
+              <p class="card-text">
+                Spacious interiors with refined natural finishes.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Community Hall -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card border-0 shadow-sm h-100">
+            <img src="CommunityHall.png" class="card-img-top" alt="Community Hall">
+            <div class="card-body">
+              <h5 class="card-title section-title">Community Hall</h5>
+              <p class="card-text">
+                Ideal for yoga, meditation, gatherings, and wellness events.
+              </p>
+              <span class="badge bg-light text-dark mb-2">Shared Space</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
-
-    <div class="row g-4 text-center">
-
-      <!-- Nature & Water -->
-      <div class="col-6 col-md-4">
-        <img src="icon-swim.png" class="feature-icon" alt="">
-        <h6 class="section-title">Backwater Access</h6>
-        <p class="small">
-          Step directly into calm waters for quiet moments, canoeing, or reflection.
+  </section>
+  <!-- AMENITIES SECTION -->
+  <section id="amenities" class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Thoughtfully Curated Amenities</h2>
+        <p class="mt-2">
+          Designed to support stillness, comfort, and meaningful time by the backwaters.
         </p>
       </div>
 
-      <div class="col-6 col-md-4">
-        <img src="icon-naturalpath.png" class="feature-icon" alt="">
-        <h6 class="section-title">Nature Walkways</h6>
-        <p class="small">
-          Gentle trails through greenery, designed for slow walks and fresh air.
-        </p>
-      </div>
+      <div class="row g-4 text-center">
 
-      <!-- Wellness & Community -->
-      <div class="col-6 col-md-4">
-        <img src="icon-meditation.png" class="feature-icon" alt="">
-        <h6 class="section-title">Yoga & Meditation</h6>
-        <p class="small">
-          Dedicated spaces for wellness practices overlooking serene surroundings.
-        </p>
-      </div>
+        <!-- Nature & Water -->
+        <div class="col-6 col-md-4">
+          <img src="icon-swim.png" class="feature-icon" alt="">
+          <h6 class="section-title">Backwater Access</h6>
+          <p class="small">
+            Step directly into calm waters for quiet moments, canoeing, or reflection.
+          </p>
+        </div>
 
-      <div class="col-6 col-md-4">
-        <img src="icon-community.png" class="feature-icon" alt="">
-        <h6 class="section-title">Community & Event Space</h6>
-        <p class="small">
-          A flexible hall for retreats, gatherings, and shared experiences.
-        </p>
-      </div>
+        <div class="col-6 col-md-4">
+          <img src="icon-naturalpath.png" class="feature-icon" alt="">
+          <h6 class="section-title">Nature Walkways</h6>
+          <p class="small">
+            Gentle trails through greenery, designed for slow walks and fresh air.
+          </p>
+        </div>
 
-      <!-- Comfort & Design -->
-      <div class="col-6 col-md-4">
-        <img src="icon-sit.png" class="feature-icon" alt="">
-        <h6 class="section-title">Private Sit-outs</h6>
-        <p class="small">
-          Each hut opens to a personal sit-out with uninterrupted natural views.
-        </p>
-      </div>
+        <!-- Wellness & Community -->
+        <div class="col-6 col-md-4">
+          <img src="icon-meditation.png" class="feature-icon" alt="">
+          <h6 class="section-title">Yoga & Meditation</h6>
+          <p class="small">
+            Dedicated spaces for wellness practices overlooking serene surroundings.
+          </p>
+        </div>
 
-      <div class="col-6 col-md-4">
-        <img src="icon-build.png" class="feature-icon" alt="">
-        <h6 class="section-title">Eco-Sensitive Architecture</h6>
-        <p class="small">
-          Built with sustainable materials and passive cooling for year-round comfort.
-        </p>
-      </div>
+        <div class="col-6 col-md-4">
+          <img src="icon-community.png" class="feature-icon" alt="">
+          <h6 class="section-title">Community & Event Space</h6>
+          <p class="small">
+            A flexible hall for retreats, gatherings, and shared experiences.
+          </p>
+        </div>
 
+        <!-- Comfort & Design -->
+        <div class="col-6 col-md-4">
+          <img src="icon-sit.png" class="feature-icon" alt="">
+          <h6 class="section-title">Private Sit-outs</h6>
+          <p class="small">
+            Each hut opens to a personal sit-out with uninterrupted natural views.
+          </p>
+        </div>
+
+        <div class="col-6 col-md-4">
+          <img src="icon-build.png" class="feature-icon" alt="">
+          <h6 class="section-title">Eco-Sensitive Architecture</h6>
+          <p class="small">
+            Built with sustainable materials and passive cooling for year-round comfort.
+          </p>
+        </div>
+
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="py-5 bg-white">
+    <div class="container">
+      <div class="row align-items-center g-5">
 
-<!-- FOOTER -->
-<footer class="py-4 text-center">
-  <div class="container">
-    <p class="mb-0">© 2026 Bodhi Backwater Retreat · Kerala</p>
-  </div>
-</footer>
+        <div class="col-lg-6">
+          <h2 class="section-title mb-3">Connect With Us</h2>
+          <p>
+            Planning a peaceful escape or a wellness retreat?
+            We’d love to help you create the perfect stay.
+          </p>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+          <p class="mb-4">
+            Reach out for availability, group bookings, or custom experiences.
+          </p>
+
+          <a href="https://wa.me/919XXXXXXXXX" target="_blank" class="btn btn-gold">
+            Chat on WhatsApp
+          </a>
+        </div>
+
+        <div class="col-lg-6 image-card">
+          <img src="contact.png" alt="Contact Bodhi Backwater Retreat">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-4 text-center">
+    <div class="container">
+      <p class="mb-0">© 2026 Bodhi Backwater Retreat · Kerala</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>
