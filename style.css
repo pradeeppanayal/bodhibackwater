@@ -53,7 +53,7 @@
      align-items: center;
      background:
          linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .25)),
-         url("hero.png") center/cover no-repeat;
+         url("img/hero.png") center/cover no-repeat;
      color: #fff;
  }
 
@@ -68,6 +68,10 @@
      margin-bottom: 18px;
      opacity: 0.9;
  }
+
+ .section {
+  padding: 5rem 0;
+}
 
  /* EXPERIENCE / GALLERY */
  .section-title {
